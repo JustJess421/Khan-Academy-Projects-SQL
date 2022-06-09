@@ -1,0 +1,30 @@
+CREATE TABLE paint (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, color TEXT, size INTEGER);
+INSERT INTO paint VALUES (1, "superpaint", 35, "white", 16);
+INSERT INTO paint VALUES (2, "emerald", 60, "gray", 16);
+INSERT INTO paint VALUES (3, "superpaint", 35, "white", 14);
+INSERT INTO paint VALUES (4, "emerald", 60, "gray", 14);
+INSERT INTO paint VALUES (5, "promar 200", 25, "white", 16);
+INSERT INTO paint VALUES (6, "duration", 40, "white", 16);
+INSERT INTO paint VALUES (7, "ext superpaint", 50, "gray", 16);
+INSERT INTO paint  VALUES (8, "latitude", 55, "gray", 16);
+INSERT INTO paint VALUES (9, "ext duration", 60, "gray", 16);
+INSERT INTO paint VALUES (10, "multipurpose primer", 35, "white", 16);
+INSERT INTO paint VALUES (11, "emerald", 25, "white", 14);
+INSERT INTO paint VALUES (12, "proclassic", 25, "white", 14);
+INSERT INTO paint  VALUES (13, "color to go", 9, "white", 14);
+INSERT INTO paint VALUES (14, "cashmere", 35, "gray", 16);
+INSERT INTO paint VALUES (15, "problock", 25, "white", 20);
+
+SELECT * 
+FROM paint
+WHERE price > 20
+ORDER BY price;
+
+SELECT SUM(price)
+FROM paint;
+
+SELECT AVG(price) 
+FRom paint;
+  :
+
+https://www.khanacademy.org/computer-programming/spin-off-of-project-design-a-store-database/6390751919915008  Link to Tables
