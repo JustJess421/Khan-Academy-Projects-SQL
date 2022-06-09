@@ -1,0 +1,26 @@
+CREATE TABLE kindle (id INTEGER PRIMARY KEY AUTOINCREMENT, day TEXT, book TEXT, days_in_row INTEGER, minutes_read INTEGER, chapters INTEGER);
+
+INSERT INTO kindle (day, book, days_in_row, minutes_read, chapters) VALUES ("monday", "Zodiac Academy", 1, 90, "1-10");
+INSERT INTO kindle (day, book, days_in_row, minutes_read, chapters) VALUES ("tuesday", "Zodiac Academy", 2, 60, "11-13");
+INSERT INTO kindle (day, book, days_in_row, minutes_read, chapters) VALUES ("wednesday", "Zodiac Academy", 0, 0, 0);
+INSERT INTO kindle (day, book, days_in_row, minutes_read, chapters) VALUES ("thursday", "Zodiac Academy", 1, 75, "14-16");
+INSERT INTO kindle (day, book, days_in_row, minutes_read, chapters) VALUES ("friday", "Zodiac Academy", 2, 120, "16-21");
+
+SELECT * FROM kindle;
+
+UPDATE kindle SET chapters = "14" WHERE id=3;
+UPDATE kindle SET days_in_row = "3" WHere id = 3;
+UPDATE kindle SET minutes_read = "45" WHere id = 3;
+UPDATE kindle SET chapters = "15-17" WHere id = 4;
+UPDATE kindle SET chapters = "18-21" WHere id = 5;
+UPDATE kindle SET days_in_row = "4" WHere id = 4;
+UPDATE kindle SET days_in_row = "5" WHere id = 5;
+
+SELECT * FROM kindle;
+
+DELETE FROM kindle WHERE id=5;
+
+SELECT * FROM kindle;
+
+
+https://www.khanacademy.org/computer-programming/spin-off-of-project-app-impersonator/4722439536295936 Link to table
