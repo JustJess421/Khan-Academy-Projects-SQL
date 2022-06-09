@@ -1,0 +1,31 @@
+/* Create table about the people and what they do here */
+CREATE TABLE books (id INTEGER PRIMARY KEY AUTOINCREMENT, book_title TEXT, author TEXT, year_released INTEGER);
+
+INSERT INTO books (book_title, author, year_released) VALUES ("A Court of Thorns and Roses", "Sarah J Maas", 2015);
+INSERT INTO books (book_title, author, year_released) VALUES ("Throne of Glass", "Sarah J Maas", 2012);
+INSERT INTO books (book_title, author, year_released) VALUES ("Crescent City", "Sarah J Maas", 2021);
+
+CREATE TABLE characters (id INTEGER PRIMARY KEY AUTOINCREMENT, characters TEXT, world TEXT, MC TEXT, author_ID INTEGER);
+
+INSERT INTO characters (characters, world, MC, author_ID) VALUES ("Feyre", "Prythian", "yes", 1);
+INSERT INTO characters (characters, world, MC, author_ID) VALUES ("Rhysand", "Prythian", "yes", 1);
+INSERT INTO characters (characters, world, MC, author_ID) VALUES ("Nesta", "Prythian", "no", 1);
+INSERT INTO characters (characters, world, MC, author_ID) VALUES ("Cassian", "Prythian", "no", 1);
+INSERT INTO characters (characters, world, MC, author_ID) VALUES ("Alein", "Erilea", "yes", 1);
+INSERT INTO characters (characters, world, MC, author_ID) VALUES ("Manon", "Erilea", "no", 1);
+INSERT INTO characters (characters, world, MC, author_ID) VALUES ("Rowan", "Erilea", "no", 1);
+INSERT INTO characters (characters, world, MC, author_ID) VALUES ("Dorian", "Erilea", "yes", 1);
+INSERT INTO characters (characters, world, MC, author_ID) VALUES ("Bryce", "Lunathion", "yes", 1);
+INSERT INTO characters (characters, world, MC, author_ID) VALUES ("Danika", "Lunathion", "no", 1);
+INSERT INTO characters (characters, world, MC, author_ID) VALUES ("Rhun", "Lunathion", "yes", 1);
+INSERT INTO characters (characters, world, MC, author_ID) VALUES ("Hunt", "Lunathion", "yes", 1);
+
+SELECT books.book_title, books.author, characters.characters, characters.world, characters.MC, books.year_released 
+FROM books
+INNER JOIN characters 
+ON books.id = books.id
+WHERE (books.book_title = "A Court of Thorns and Roses" AND characters.world = "Prythian") OR (books.book_title = "Throne of Glass" AND characters.world = "Erilea") OR (books.book_title = "Crescent City" AND characters.world = "Lunathion")
+ORDER BY books.year_released;
+
+
+https://www.khanacademy.org/computer-programming/spin-off-of-project-famous-people/6230377857859584  Link to Tables
